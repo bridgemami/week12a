@@ -1,16 +1,16 @@
 import Link from 'next/link';
 
 export function SwLink ( { author, isStarWars, id } ) {
-  let tag = (isStarWars) ? "/Yes/" : "/No/";
-  return <div className="p-2">
+  let tag = (isStarWars) ? "/SW/" : "/notSW/";
+  return <div className="p-2 border border-danger border-5 rounded mt-5">
+      <h6>Their friend from another universe:</h6>
     <div className="list-group">
-          <Link key={"link"+id} href={tag+id}>
+          <Link key={"link" + id} href={tag +'/'+ id}>
             <a key={id} className="list-group-item list-group-item-action">{author}</a>
           </Link>
     </div>  
   </div>
 }
-
 
 
 export default function CharacterList ( { info } ) {
@@ -26,7 +26,7 @@ export default function CharacterList ( { info } ) {
             <h6 className="card-subtitle mb-2 text-muted">{
                 (info.sw) ? "Star Wars" : "Not Star Wars"
             }</h6>
-            <SwLink name={info.notSWData.author} isSW={!info.sw} id={info.notSWData.id}></SwLink>
+            <SwLink name={info.notSWData.author} isStarWars={!info.sw} id={info.notSWData.id}></SwLink>
         </div>
       </article>
       </>

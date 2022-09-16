@@ -19,11 +19,11 @@ export async function getStaticProps() {
 export default function Home({ starwarss, notstarwarss }) {
   return (
       <Layout home>
-        <div class="container-fluid">
-          <div class="row">
-            <h1 class="text-center mb-4">A Character List</h1>
+        <div className="container-fluid">
+          <div className="row">
+            <h1 className="text-center mb-4">A Character List</h1>
           </div>
-          <div class='row'>
+          <div className='row'>
           <CharacterList sw={starwarss} />
           <CharacterList sw={notstarwarss} isNotSW />
           </div>

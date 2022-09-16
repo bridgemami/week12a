@@ -10,7 +10,7 @@ return (
         <main>{children}</main>
         {!home && (
             <Link href='/'>
-                <a className="btn btn-success btn-lg mt-4">Back to Homepage</a>
+                <a className="btn btn-success btn-lg mt-4 my-auto">Back to Homepage</a>
             </Link>
         )}
 
