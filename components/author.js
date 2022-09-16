@@ -5,7 +5,7 @@ export function SwLink ( { author, isStarWars, id } ) {
   return <div className="p-2 border border-danger border-5 rounded mt-5">
       <h6>Their friend from another universe:</h6>
     <div className="list-group">
-          <Link key={"link" + id} href={tag +'/'+ id}>
+          <Link key={"link" + id} href={tag + id}>
             <a key={id} className="list-group-item list-group-item-action">{author}</a>
           </Link>
     </div>  
