@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 export function SwLink ( { author, isStarWars, id } ) {
   let tag = (isStarWars) ? "/SW/" : "/notSW/";
+  console.log(id +" " + author +" " + isStarWars);
   return <div className="p-2 border border-danger border-5 rounded mt-5">
       <h6>Their friend from another universe:</h6>
     <div className="list-group">
@@ -26,6 +27,7 @@ export default function CharacterList ( { info } ) {
             <h6 className="card-subtitle mb-2 text-muted">{
                 (info.sw) ? "Star Wars" : "Not Star Wars"
             }</h6>
+            <button className="btn btn-primary"><a href={info.youtube}>{info.youtubeTitle}</a></button>
             <SwLink name={info.notSWData.author} isStarWars={!info.sw} id={info.notSWData.id}></SwLink>
         </div>
       </article>
