@@ -20,10 +20,14 @@ export default function Home({ allData }) {
       <Layout home>
             <h1 className="text-center mb-4">A The Post List</h1>
           <div className="list-group">
-         {allData.map(({id, title} ) => 
+         {allData.map(({id, title, content, link, date, modify} ) => 
          <ul key={id}>
          <li>The post id is <strong>{id}</strong>.</li>
          <li>The title is <strong>{title.rendered}</strong>.</li>
+         <li>The post is <em>{content.rendered}</em></li>
+         <li><Link href={link}><a>{link}</a></Link></li>
+         <li>Date created: <strong>{date}</strong></li>
+         <li>Last modified: {modify}</li>
          </ul>
   )
          }
