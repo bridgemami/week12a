@@ -21,10 +21,10 @@ export default function Home({ allData }) {
             <h1 className="text-center mb-4">A The Post List</h1>
           <div className="list-group">
          {allData.map(({id, title} ) => 
-         <ol key={id}>
-         <li>The post id is {id}</li>
-         <li>The title is {title.rendered}.</li>
-         </ol>
+         <ul key={id}>
+         <li>The post id is <strong>{id}</strong>.</li>
+         <li>The title is <strong>{title.rendered}</strong>.</li>
+         </ul>
   )
          }
         </div>    
